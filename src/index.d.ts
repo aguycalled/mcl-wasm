@@ -169,6 +169,8 @@ export function hashToFr(s: string | Uint8Array): Fr;
 export function hashAndMapToG1(s: string | Uint8Array): G1;
 export function hashAndMapToG2(s: string | Uint8Array): G2;
 
+export function MapToG1(s: string | Uint8Array): G1;
+
 export function pow(x: GT, y: Fr): GT;
 export function pairing(P: G1, Q: G2): GT;
 export function millerLoop(P: G1, Q: G2): GT;
