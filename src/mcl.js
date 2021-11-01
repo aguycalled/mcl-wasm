@@ -191,7 +191,6 @@ const _mclSetupFactory = (createModule, getRandomValues) => {
     mod.mclBnG1_deserialize = _wrapDeserialize(mod._mclBnG1_deserialize)
     mod.mclBnG1_serialize = _wrapSerialize(mod._mclBnG1_serialize)
     mod.mclBnG1_hashAndMapTo = _wrapInput(mod._mclBnG1_hashAndMapTo, 1)
-    mod.mclBnG1_mapTo = _wrapInput(mod._mclBnG1_mapTo, 1)
 
     /// ////////////////////////////////////////////////////////////
     mod.mclBnG2_malloc = () => {
@@ -527,9 +526,6 @@ const _mclSetupFactory = (createModule, getRandomValues) => {
       }
       setHashOf (s) {
         this._setter(mod.mclBnG1_hashAndMapTo, s)
-      }
-      mapTo (s) {
-        this._setter(mod.mclBnG1_mapTo, s)
       }
     }
     exports.deserializeHexStrToG1 = s => {
